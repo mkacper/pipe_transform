@@ -2,10 +2,7 @@
 -export([parse_transform/2]).
 
 parse_transform(Ast, _Opt) ->
-	%io:format("AST:~p~n",[Ast]),
-    NewAst = [parse(X) || X <- Ast],
-	%io:format("NEW AST:~p~n",[NewAst]),
-	NewAst.
+    [parse(A) || A <- Ast].
 
 % Helpers
 
