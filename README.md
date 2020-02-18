@@ -24,7 +24,7 @@ defmodule Pipe do
 end
 ```
 
-In Erlang we could write similar code using `pipe_transfrom` as follows:
+In Erlang we could write similar code using `pipe_transform` as follows:
 
 ```erlang
 -module(pipe).
