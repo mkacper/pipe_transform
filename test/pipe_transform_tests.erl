@@ -1,5 +1,5 @@
 -module(pipe_transform_tests).
--compile({parse_transform, pipe_transform}).
+-include_lib("pipe_transform/include/pipe_transform.hrl").
 -compile(export_all).
 
 -include_lib("eunit/include/eunit.hrl").
@@ -29,9 +29,9 @@ pipe_test_() ->
      end,
      fun() ->
         A = 1,
-        B = pipe_transform:pipe(A,
-                                pipe(),
-                                pipe()),
+        B = ?p(A,
+               pipe(),
+               pipe()),
         ?assert(B =:= 1)
      end
     ].

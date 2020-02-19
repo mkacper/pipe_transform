@@ -28,8 +28,7 @@ In Erlang we could write similar code using `pipe_transform` as follows:
 
 ```erlang
 -module(pipe).
--compile({parse_transform, pipe_transform}).
--define(p, pipe_transform:pipe)
+-include_lib("pipe_transform/include/pipe_transform.hrl").
 
 pipe_example() ->
     ?p(1,
